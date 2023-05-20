@@ -2,7 +2,7 @@ name: PreRelease
 
 on:
     push:
-        branch:
+        branches:
             - prerelease
 
 jobs:
@@ -26,6 +26,9 @@ jobs:
                   cache: pnpm
 
             - run: pnpm install
+
+            - name: Build
+                run: pnpm build
 
             - name: Publish
               run: pnpm --no-git-checks -r publish --access public
