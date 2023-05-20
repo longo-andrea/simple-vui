@@ -11,7 +11,8 @@
 		"type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
 		"lint": "eslint packages",
 		"format": "prettier --write .",
-		"prepare": "husky install"
+		"prepare": "husky install",
+		"release": "bumpp -r"
 	},
 	"dependencies": {
 		"vue": "^3.3.4"
@@ -33,6 +34,7 @@
 		"@vue/eslint-config-typescript": "^11.0.3",
 		"@vue/test-utils": "^2.3.2",
 		"@vue/tsconfig": "^0.4.0",
+		"bumpp": "^9.1.0",
 		"eslint": "^8.41.0",
 		"eslint-plugin-vue": "^9.13.0",
 		"husky": "^8.0.3",
