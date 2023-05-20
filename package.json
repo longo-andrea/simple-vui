@@ -9,7 +9,7 @@
 		"test:unit": "vitest",
 		"build-only": "vite build",
 		"type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
-		"lint": "eslint src",
+		"lint": "eslint packages",
 		"format": "prettier --write .",
 		"prepare": "husky install"
 	},
