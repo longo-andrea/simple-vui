@@ -2,6 +2,9 @@
 	"name": "simple-vui",
 	"version": "0.0.1-beta.2",
 	"private": false,
+	"files": [
+		"dist"
+	],
 	"scripts": {
 		"dev": "vite",
 		"build": "run-p type-check build-only",
