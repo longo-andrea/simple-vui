@@ -96,7 +96,30 @@ importers:
         specifier: ^1.6.5
         version: 1.6.5(typescript@5.0.4)
 
-  packages/core: {}
+  packages/core:
+    dependencies:
+      vue:
+        specifier: ^3.3.4
+        version: 3.3.4
+    devDependencies:
+      jsdom:
+        specifier: ^22.0.0
+        version: 22.0.0
+      npm-run-all:
+        specifier: ^4.1.5
+        version: 4.1.5
+      typescript:
+        specifier: ~5.0.4
+        version: 5.0.4
+      vite:
+        specifier: ^4.3.8
+        version: 4.3.8(@types/node@18.16.13)
+      vitest:
+        specifier: ^0.31.1
+        version: 0.31.1(jsdom@22.0.0)
+      vue-tsc:
+        specifier: ^1.6.5
+        version: 1.6.5(typescript@5.0.4)
 
 packages:
 
