@@ -1,6 +1,6 @@
 {
 	"name": "simple-vui",
-	"version": "0.0.1-beta.3",
+	"version": "0.0.1-beta.4",
 	"private": false,
 	"files": [
 		"dist"
