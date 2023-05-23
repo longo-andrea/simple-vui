@@ -1,0 +1,47 @@
+@import '@core/styles/index.scss';
+
+$small-avatar: 28px;
+$medium-avatar: 36px;
+$big-avatar: 52px;
+$default-background: #ededed;
+$font-size: 12px;
+
+.sv-avatar {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	border: 2px solid $border-base;
+	border-radius: $border-radius-1;
+	background-color: $default-background;
+
+	color: $color-base;
+	font-size: $font-size;
+	font-weight: $font-bold;
+
+	overflow: hidden;
+
+	&--small {
+		width: $small-avatar;
+		height: $small-avatar;
+	}
+
+	&--medium {
+		width: $medium-avatar;
+		height: $medium-avatar;
+	}
+
+	&--big {
+		width: $big-avatar;
+		height: $big-avatar;
+	}
+
+	&--rounded {
+		border-radius: 50%;
+	}
+
+	&__image,
+	&__placeholder {
+		width: 100%;
+	}
+}

@@ -6,7 +6,8 @@
 		"composite": true,
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["./src/*"]
-		}
+			"@core/*": ["./packages/core/*"]
+		},
+		"allowImportingTsExtensions": true
 	}
 }
