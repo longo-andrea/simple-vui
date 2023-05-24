@@ -29,6 +29,8 @@ jobs:
 
             - run: pnpm build
 
+            - run: pnpm test:unit
+
             - name: Publish
               run: pnpm publish --access public --publish-branch prerelease
               env:
