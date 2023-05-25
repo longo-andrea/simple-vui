@@ -10,19 +10,15 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vue-tsc --noEmit && vite build && vue-tsc --declaration --emitDeclarationOnly",
-		"preview": "vite preview",
 		"test:unit": "vitest",
-		"build-only": "vite build",
-		"type-check": "vue-tsc --noEmit -p tsconfig.vitest.json --composite false",
 		"lint": "eslint packages",
 		"format": "prettier --write .",
 		"prepare": "husky install",
 		"release": "bumpp -r",
-		"storybook": "storybook dev -p 6006",
+		"storybook:dev": "storybook dev -p 6006",
 		"storybook:build": "storybook build",
-		"docs:dev": "vitepress dev docs & pnpm storybook",
-		"docs:build": "vitepress build docs",
-		"docs:preview": "vitepress preview docs"
+		"docs:dev": "pnpm build && vitepress dev docs",
+		"docs:build": "vitepress build docs"
 	},
 	"dependencies": {
 		"vue": "^3.3.4"
