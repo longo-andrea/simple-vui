@@ -1,11 +1,5 @@
 import './AvatarGroup.scss'
-import {
-	defineComponent,
-	PropType,
-	ExtractPublicPropTypes,
-	toRefs,
-	ExtractPropTypes,
-} from 'vue'
+import { defineComponent, PropType, toRefs, ExtractPropTypes } from 'vue'
 import Avatar, {
 	AvatarProps,
 	AvatarPropsSize,
@@ -36,7 +30,7 @@ export const avatarGroupProps = {
 	},
 }
 
-export type AvatarGroupProps = ExtractPublicPropTypes<typeof avatarGroupProps>
+export type AvatarGroupProps = ExtractPropTypes<typeof avatarGroupProps>
 
 export default defineComponent({
 	name: 'AvatarGroup',
@@ -44,16 +38,20 @@ export default defineComponent({
 	setup(props: AvatarGroupProps) {
 		const { avatars, type, size } = toRefs(props)
 		const restAvatarCount =
-			avatars.value.length > 2 ? avatars.value.length - 2 : 0
+			avatars?.value && avatars.value.length > 2
+				? avatars.value.length - 2
+				: 0
 
 		return () => (
 			<div class="sv-avatar-group">
-				{avatars.value.slice(0, 2).map((avatar: AvatarGroupItem) => (
+				{avatars?.value?.slice(0, 2).map((avatar: AvatarGroupItem) => (
 					<Avatar
-						type={type.value}
-						size={size.value}
+						type={type?.value}
+						size={size?.value}
 						url={
-							avatar.url ? new URL(avatar.url?.toString()) : null
+							avatar.url
+								? new URL(avatar.url?.toString())
+								: undefined
 						}
 						placeholder={avatar.placeholder.toString()}
 					/>
@@ -62,8 +60,8 @@ export default defineComponent({
 				{restAvatarCount ? (
 					<Avatar
 						placeholder={`+${restAvatarCount}`}
-						type={type.value}
-						size={size.value}
+						type={type?.value}
+						size={size?.value}
 						data-testid="rest-avatar"
 					/>
 				) : null}

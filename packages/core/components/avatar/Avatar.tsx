@@ -1,11 +1,5 @@
 import './Avatar.scss'
-import {
-	defineComponent,
-	ExtractPublicPropTypes,
-	toRefs,
-	PropType,
-	ref,
-} from 'vue'
+import { defineComponent, ExtractPropTypes, toRefs, PropType, ref } from 'vue'
 
 export type AvatarPropsType = 'rounded' | 'rectangle'
 export type AvatarPropsSize = 'small' | 'medium' | 'big'
@@ -33,7 +27,7 @@ export const avatarProps = {
 	},
 }
 
-export type AvatarProps = ExtractPublicPropTypes<typeof avatarProps>
+export type AvatarProps = ExtractPropTypes<typeof avatarProps>
 
 export default defineComponent({
 	name: 'Avatar',
@@ -50,14 +44,14 @@ export default defineComponent({
 			return (
 				<img
 					class="sv-avatar__image"
-					src={url.value?.toString()}
-					alt={placeholder.value}
+					src={url?.value?.toString()}
+					alt={placeholder?.value}
 				/>
 			)
 		}
 		const getPlaceholderImg = () => {
 			return (
-				<span class="sv-avatar__placeholder">{placeholder.value}</span>
+				<span class="sv-avatar__placeholder">{placeholder?.value}</span>
 			)
 		}
 
@@ -65,7 +59,7 @@ export default defineComponent({
 			<span
 				class={`sv-avatar sv-avatar--${size.value} sv-avatar--${type.value}`}
 			>
-				{url.value ? getAvatarImg() : getPlaceholderImg()}
+				{url?.value ? getAvatarImg() : getPlaceholderImg()}
 			</span>
 		)
 	},
