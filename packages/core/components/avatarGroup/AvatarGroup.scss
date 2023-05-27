@@ -1,0 +1,16 @@
+@import '@core/styles/index.scss';
+
+$small-avatar: 28px;
+$medium-avatar: 36px;
+$big-avatar: 52px;
+$default-background: #ededed;
+$font-size: 12px;
+
+.sv-avatar-group {
+	display: flex;
+	align-items: center;
+
+	.sv-avatar:not(:first-child) {
+		margin-left: -13px;
+	}
+}

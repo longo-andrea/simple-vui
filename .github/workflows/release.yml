@@ -1,9 +1,9 @@
-name: PreRelease
+name: Release
 
 on:
     push:
         branches:
-            - prerelease
+            - main
 
 jobs:
     deploy:
@@ -32,6 +32,6 @@ jobs:
             - run: pnpm test:unit
 
             - name: Publish
-              run: pnpm publish --access public --publish-branch prerelease
+              run: pnpm publish --access public
               env:
                   NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

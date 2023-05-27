@@ -1,14 +1,29 @@
 {
-	"files": [],
-	"references": [
-		{
-			"path": "./tsconfig.node.json"
-		},
-		{
-			"path": "./tsconfig.app.json"
-		},
-		{
-			"path": "./tsconfig.vitest.json"
-		}
-	]
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"module": "ESNext",
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"skipLibCheck": true,
+
+		/* Bundler mode */
+		"moduleResolution": "bundler",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"jsx": "preserve",
+
+		/* Linting */
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"outDir": "./dist"
+	},
+	"include": ["packages/**/*.tsx", "packages/**/*.ts", "packages/**/*.vue"],
+	"exclude": [
+		"packages/**/*.stories.tsx",
+		"packages/**/*.stories.ts",
+		"packages/**/*.spec.ts"
+	],
+	"references": [{ "path": "./tsconfig.node.json" }]
 }
