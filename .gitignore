@@ -30,3 +30,5 @@ coverage
 
 .vitepress/dist
 .vitepress/cache
+
+storybook-static
