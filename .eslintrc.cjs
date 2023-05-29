@@ -12,5 +12,7 @@ module.exports = {
 		'import/named': 'off',
 		'@typescript-eslint/no-unused-vars': 'off',
 		'operator-linebreak': 'off',
+		'quote-props': 'off',
+		quotes: 'off',
 	},
 }

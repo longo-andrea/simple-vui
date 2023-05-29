@@ -16,7 +16,7 @@ Basic.args = {
 }
 
 /**
- * The Chip component displays a simple tag.
+ * The Chip component displays a simple pill.
  */
 export default {
 	title: 'Components/Chip',
@@ -27,23 +27,26 @@ export default {
 		default: {
 			control: 'text',
 			defaultValue: 'Hello World!',
-			description: 'Descrizione',
+			description: "Allows to define chip's content",
 		},
 		shape: {
 			control: 'select',
-			description: 'Descrizione',
+			description:
+				'The shape of the chip, can be `rectangle` or `rounded`',
 			options: ['rectangle', 'rounded'],
 			defaultValue: 'rounded',
 		},
 		variant: {
 			control: 'select',
-			description: 'Descrizione',
+			description:
+				'The variant of the chips, can be: `default`, `primary`, `success`, `warning`, `error`',
 			options: ['default', 'primary', 'success', 'warning', 'error'],
 			defaultValue: 'primary',
 		},
 		size: {
 			control: 'select',
-			description: 'Descrizione',
+			description:
+				'The size of the chip, can be: `small`, `medium` or `big`',
 			options: ['small', 'medium', 'big'],
 			defaultValue: 'small',
 		},
