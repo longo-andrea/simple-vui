@@ -1,0 +1,74 @@
+@import '@core/styles/index.scss';
+
+$color-default: #c7c7cc;
+
+.sv-chip {
+	display: inline-flex;
+	padding: $spacer-1 $spacer-3;
+
+	background-color: rgba($color-default, 0.3);
+	border: 1px solid $color-default;
+	border-radius: $border-radius-1;
+	color: $color-base;
+	font-weight: $font-medium;
+
+	&--success {
+		background-color: rgba($color-success, 0.3);
+		border: 1px solid $color-success;
+		border-radius: $border-radius-1;
+		color: darken($color-success, 15);
+		font-weight: $font-medium;
+	}
+
+	&--warning {
+		background-color: rgba($color-warning, 0.3);
+		border: 1px solid $color-warning;
+		border-radius: $border-radius-1;
+		color: darken($color-warning, 15);
+		font-weight: $font-medium;
+	}
+
+	&--error {
+		background-color: rgba($color-error, 0.3);
+		border: 1px solid $color-error;
+		border-radius: $border-radius-1;
+		color: darken($color-error, 15);
+		font-weight: $font-medium;
+	}
+
+	&--primary {
+		background-color: rgba($color-primary, 0.3);
+		border: 1px solid $color-primary;
+		border-radius: $border-radius-1;
+		color: darken($color-primary, 15);
+		font-weight: $font-medium;
+	}
+
+	&--disabled {
+		background-color: rgba($color-disabled, 0.3);
+		border: 1px solid $color-disabled;
+		border-radius: $border-radius-1;
+		color: darken($color-disabled, 15);
+		font-weight: $font-medium;
+	}
+
+	&--rounded {
+		border-radius: $border-radius-4;
+	}
+
+	&--rectangle {
+		border-radius: $border-radius-1;
+	}
+
+	&--small {
+		font-size: $font-small;
+	}
+
+	&--medium {
+		font-size: $font-normal;
+	}
+
+	&--big {
+		font-size: $font-big;
+	}
+}
